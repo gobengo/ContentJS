@@ -6,8 +6,8 @@
 </head>
 <body>
     <script type="text/javascript">
-        require(['content'], function(Content) {
-            console.log(Content);
+        require(['content', 'content/AS.content', 'content/triptych.content', 'content/streamhub.content'], function(Content, ASContent, Triptych, SHContent) {
+            console.log(Content, ASContent, Triptych, SHContent);
         });
     </script>
 </body>

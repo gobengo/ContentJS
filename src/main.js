@@ -17,6 +17,10 @@
         return this._html = newHtml;
       };
 
+      Content.prototype.toString = function() {
+        return this.html();
+      };
+
       return Content;
 
     })();
@@ -24,3 +28,7 @@
   });
 
 }).call(this);
+
+/*
+//@ sourceMappingURL=main.map
+*/

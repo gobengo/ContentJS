@@ -31,6 +31,11 @@ Or set the HTML by passing it a string.
 					throw "Content::html must be passed a String of HTML"
 				@_html = newHtml
 
+It's conventional for JavaScript objects to have a `.toString` method that will return a String representation. Easy, we'll just return the HTML
+
+			toString: () ->
+				return @html()
+
 This module exports the `Content` constructor
 
 		exports.Content = Content
