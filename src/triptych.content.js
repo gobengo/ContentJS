@@ -6,6 +6,11 @@
   define(function(require, exports, module) {
     var Content, Triptych;
     Content = require('content');
+    /*
+    Triptych Content
+    Content with three properties. The HTML joins the three together
+    */
+
     Triptych = (function(_super) {
       __extends(Triptych, _super);
 
@@ -55,6 +60,15 @@
         }
         return this._third = newThird;
       };
+
+      /*
+      fourth: new Property
+          name: 'fourth'
+          private: @_fourth
+          validator: (val) ->
+              return typeof val is 'string', "must be passed a string"
+      */
+
 
       return Triptych;
 

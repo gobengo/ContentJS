@@ -36,6 +36,9 @@ It's conventional for JavaScript objects to have a `.toString` method that will 
 			toString: () ->
 				return @html()
 
+Subclasses are encouraged to expose more getters and setters for other, more specific properties.
+Just as long as there's always a way of getting HTML from `.html()`
+
 This module exports the `Content` constructor
 
 		exports.Content = Content

@@ -1,7 +1,12 @@
 define (require, exports, module) ->
 	Content = require 'content'
 
+	###
+	ActivityStrea.ms Object Content
+	http://activitystrea.ms/specs/json/1.0/#object
+	###
 	class ASObject extends Content
+		# @todo accept AS Object JSON (duh)
 		constructor: (html) ->
 			@content html
 
@@ -11,7 +16,11 @@ define (require, exports, module) ->
 				return false
 			return @content()
 
-		# @todo ensure this is valid
+		###
+		The AS Object schema has a defined `content` property:
+		Natural-language description of the object encoded as a single JSON String containing HTML markup. Visual elements such as thumbnail images MAY be included. An object MAY contain a content property
+		@todo ensure this is valid
+		###
 		content: (newHtml) ->
 			if not newHtml
 				return @_content

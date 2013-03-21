@@ -6,6 +6,11 @@
   define(function(require, exports, module) {
     var Content, SHContent;
     Content = require('content');
+    /*
+    StreamHub Content
+    @param streamhubContent {Object} An data object from the StreamHub SDK
+    */
+
     SHContent = (function(_super) {
       __extends(SHContent, _super);
 

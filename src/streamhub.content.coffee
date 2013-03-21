@@ -1,6 +1,10 @@
 define (require, exports, module) ->
     Content = require 'content'
 
+    ###
+    StreamHub Content
+    @param streamhubContent {Object} An data object from the StreamHub SDK
+    ###
     class SHContent extends Content
         constructor: (streamhubContent) ->
             if typeof streamhubContent isnt 'object' or

@@ -6,6 +6,11 @@
   define(function(require, exports, module) {
     var ASObject, Content;
     Content = require('content');
+    /*
+    	ActivityStrea.ms Object Content
+    	http://activitystrea.ms/specs/json/1.0/#object
+    */
+
     ASObject = (function(_super) {
       __extends(ASObject, _super);
 
@@ -20,6 +25,13 @@
         }
         return this.content();
       };
+
+      /*
+      		The AS Object schema has a defined `content` property:
+      		Natural-language description of the object encoded as a single JSON String containing HTML markup. Visual elements such as thumbnail images MAY be included. An object MAY contain a content property
+      		@todo ensure this is valid
+      */
+
 
       ASObject.prototype.content = function(newHtml) {
         if (!newHtml) {

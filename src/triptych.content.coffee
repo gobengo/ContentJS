@@ -1,6 +1,10 @@
 define (require, exports, module) ->
     Content = require 'content'
 
+    ###
+    Triptych Content
+    Content with three properties. The HTML joins the three together
+    ###
     class Triptych extends Content
         constructor: (first, second, third) ->
             if not (first and second and third)
@@ -35,5 +39,13 @@ define (require, exports, module) ->
             if typeof newThird isnt 'string'
                 throw "Triptych::first must be passed a String of HTML"
             @_third = newThird
+
+        ###
+        fourth: new Property
+            name: 'fourth'
+            private: @_fourth
+            validator: (val) ->
+                return typeof val is 'string', "must be passed a string"
+        ###
 
     exports = Triptych
