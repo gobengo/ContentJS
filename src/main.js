@@ -9,6 +9,21 @@ define(function(require, exports, module) {
     };
 
     /**
+     * Register a Content subclass with the Content core so that instances
+     * of it can be created by Content.create
+     */
+    Content.register = function (contentType) {
+
+    };
+
+    /**
+     * Create a piece of Content using the best subclass for the provided parameter
+     */
+    Content.create = function (something) {
+
+    };
+
+    /**
      * Get an HTML representation of the Content
      * @param newHtml {String, optional} A new string to set as the HTML
      */
